@@ -1,13 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Plantilla responsive</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Estructura responsive para ordenador y móvil (plantilla)">
 </head>
 
 <body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo"><img src="images/logo.png" alt="Viajes Mundo logo"></div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Destinos</a></li>
+                    <li><a href="#">Historias</a></li>
+                    <li><a href="#">Trekking</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="actions">
+                <button class="btn ghost">Sign in</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <h1>Viajes Mundo</h1>
+                    <p class="lead">Encuentra destinos únicos y experiencias memorables.En nuestra agencia de viajes convertimos tus sueños en experiencias inolvidables. Diseñamos cada viaje a tu medida, cuidando cada detalle para que solo te preocupes por disfrutar. Ya sea una escapada de descanso, una aventura llena de emoción o el viaje que siempre imaginaste, estamos aquí para acompañarte en cada paso. 
+                         Explora nuevos destinos, vive culturas únicas y crea recuerdos que durarán toda la vida. Nosotros nos encargamos del camino, tú eliges el destino.</p>
+                    <div class="hero-cta">
+                        <button class="btn primary">Plan your trip</button>
+                    </div>
+                </div>
+
+                <div class="hero-gallery">
+                    <div class="card large">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop" alt="Playa paradisíaca">
+                    </div>
+                        <div class="card small">
+                            <img src="https://estaticos-cdn.prensaiberica.es/clip/54fdb2e8-f9e3-40f6-878a-83886f040013_original-libre-aspect-ratio_default_0.webp" alt="Lagos de montaña - Viajar El Periódico">
+                        </div>
+                        <div class="card small">
+                            <img src="https://cdn2.civitatis.com/francia/paris/galeria/torre-eiffel-altura.jpg" alt="Torre Eiffel - París">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="destinations" class="section destinations">
+            <div class="container">
+                <h2 class="section-title">Top Destinations</h2>
+                <div class="filters">
+                    <select aria-label="Filtrar destinos">
+                        <option>Popular</option>
+                        <option>Asia</option>
+                        <option>Europa</option>
+                    </select>
+                </div>
+
+                <div class="grid cards-grid">
+                    <article class="card">
+                        <img src="https://cdn.tourradar.com/s3/serp/1536x1552/5032_Gia44gKW.jpg" alt="Vietnam - TourRadar">
+                        <div class="card-body">
+                            <h3>Golden Bridge</h3>
+                            <p class="muted">Ba Na Hills, Vietnam</p>
+                            <p class="meta">Puente icónico sobre colinas, ideal para fotos y excursiones.</p>
+                            <div class="price">Desde 299€</div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://www.royalcaribbean.com/media-assets/pmc/content/dam/shore-x/santorini-jtr/soc4-sailing-the-caldera-of-santorini/stock-photo-ammoudi-bay-oia-village-santorini-greece_630008048.jpg?w=880" alt="Ammoudi Bay, Santorini - playa y caldera">
+                        <div class="card-body">
+                            <h3>Santorini</h3>
+                            <p class="muted">Islas Griegas</p>
+                            <p class="meta">Casas blancas y puestas de sol impresionantes. Paquetes de 4-7 días.</p>
+                            <div class="price">Desde 499€</div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://res.cloudinary.com/enchanting/q_70,f_auto,w_1024,h_683,c_fit/quark-web/2024/09/085260-Patagonia-glacier-pixabay-530050_Web.jpg" alt="Glaciar - Patagonia">
+                        <div class="card-body">
+                            <h3>Patagonia</h3>
+                            <p class="muted">Chile & Argentina</p>
+                            <p class="meta">Trekking guiado por glaciares y paisajes salvajes.</p>
+                            <div class="price">Desde 899€</div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://content-viajes.nationalgeographic.com.es/medio/2024/06/27/templos-de-kioto_00000000_240627130332_960x640.jpg" alt="Templos de Kioto - National Geographic">
+                        <div class="card-body">
+                            <h3>Kyoto</h3>
+                            <p class="muted">Japón</p>
+                            <p class="meta">Templos, jardines y cultura tradicional en un circuito de 5 días.</p>
+                            <div class="price">Desde 749€</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="stories" class="section stories">
+            <div class="container">
+                <h2 class="section-title">Latest Stories</h2>
+                <div class="stories-list">
+                    <article class="story">
+                        <div class="story-thumb">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=60&auto=format&fit=crop" alt="Platos locales - comida tradicional">
+                        </div>
+                        <div class="story-content">
+                            <h3>Los mejores mercados locales</h3>
+                            <p class="muted">Gastronomía • 12 Dic 2025</p>
+                            <p>Descubre dónde probar platos auténticos y cómo organizar una ruta de comida en tu próxima escapada.</p>
+                        </div>
+                    </article>
+
+                    <article class="story small">
+                        <div class="story-thumb">
+                            <img src="https://images.unsplash.com/photo-1444090542259-0af8fa96557e?w=600&q=60&auto=format&fit=crop" alt="Paisaje de montaña - ruta de senderismo">
+                        </div>
+                        <div class="story-content">
+                            <h3>5 rutas para principiantes</h3>
+                            <p class="muted">Aventura • 3 Nov 2025</p>
+                        </div>
+                    </article>
+
+                    <article class="story small">
+                        <div class="story-thumb">
+                            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=60&auto=format&fit=crop" alt="Hotel boutique">
+                        </div>
+                        <div class="story-content">
+                            <h3>Hoteles con encanto</h3>
+                            <p class="muted">Alojamiento • 22 Oct 2025</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section highlights">
+            <div class="container">
+                <h2 class="section-title">Trekker's Highlights</h2>
+                <div class="card" style="display:flex;gap:12px;align-items:flex-start;">
+                    <div style="flex:0 0 140px">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=60&auto=format&fit=crop" alt="Perfil viajero">
+                    </div>
+                    <div>
+                        <h3>Maria Angélica</h3>
+                        <p class="muted">Guía local · Experiencias personalizadas</p>
+                        <p>Explora rutas menos conocidas con guías locales. Ofrecemos itinerarios privados, grupos pequeños y soporte 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container newsletter-inner">
+                <h2>Get Your Travel Inspiration</h2>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Introduce tu email" aria-label="email">
+                    <button class="btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <div class="logo">Logo</div>
+                <p class="muted">
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+                        <img class="social-icon" src="data:image/png;base64,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" alt="YouTube logo">
+                    </a> ·
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                        <img class="social-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/24px-Instagram_logo_2016.svg.png" alt="Instagram logo">
+                    </a> ·
+                    <a href="https://x.com/?lang=es" target="_blank" rel="noopener">
+                        <img class="social-icon" src="https://www.lasexta.com/tecnologia-tecnoxplora/redes-sociales/red-social-antes-twitter-sufre-caida-nivel-global_2025031067cf17379ce7140001ac5674.html" alt="X logo">
+                    </a> ·
+                    <a href="https://www.facebook.com/?locale=es_ES" target="_blank" rel="noopener">
+                        <img class="social-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/24px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook logo">
+                    </a>
+                </p>
+
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
