@@ -1,0 +1,5 @@
+El PDF describe y justifica el diseño web final de una agencia de viajes, siguiendo las tendencias actuales de UX/UI. El proyecto se centra en ofrecer una experiencia de usuario clara, visual e intuitiva, enfocada en la inspiración y el descubrimiento de destinos.
+
+Se explica el uso de una paleta de colores suave y coherente con el tema de viajes, aplicada de forma funcional para destacar elementos importantes. La tipografía sans-serif moderna mejora la legibilidad y refuerza el carácter digital del proyecto. El contenido se organiza mediante cards, facilitando la navegación y la comprensión de la información, junto a un uso equilibrado de espacios en blanco y botones redondeados que mejoran la experiencia de uso.
+
+Además, se detalla la estructura de la web tanto en versión desktop como móvil, destacando una organización clara y progresiva. Finalmente, se incluye un estudio de mercado basado en agencias de viajes y plataformas del sector, justificando que el diseño sigue las tendencias actuales y se adapta a un mercado competitivo.
