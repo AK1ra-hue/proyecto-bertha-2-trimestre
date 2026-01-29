@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos - Viajes Mundo - Agencia de Viajes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/destinos.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="bi bi-airplane-fill"></i> Viajes Mundo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="destinos.html">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Nuestros Destinos</h1>
+            <p class="lead">Explora el mundo con nuestros paquetes cuidadosamente seleccionados</p>
+        </div>
+    </div>
+
+    <!-- Filtros -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="text-center">
+                <button class="btn btn-outline-primary filter-btn active" data-filter="todos">Todos</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="europa">Europa</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="asia">Asia</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="america">América</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="africa">África</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Destinos -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4" id="destinosContainer">
+                <!-- Europa -->
+                <div class="col-md-6 col-lg-4 destino-item" data-categoria="europa">
+                    <div class="card destination-card shadow">
+                        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800"
+                            class="card-img-top" alt="París">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Europa</span>
+                            <h5 class="card-title fw-bold">París, Francia</h5>
+                            <p class="card-text">Torre Eiffel, Louvre, Notre Dame. La ciudad del amor y la luz.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 7 días / 6 noches</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Hotel 4 estrellas</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Desayuno incluido</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Desde $1,899</span>
+                                <a href="contacto.html" class="btn btn-outline-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 destino-item" data-categoria="europa">
+                    <div class="card destination-card shadow">
+                        <img src="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=800"
+                            class="card-img-top" alt="Grecia">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Europa</span>
+                            <h5 class="card-title fw-bold">Santorini, Grecia</h5>
+                            <p class="card-text">Islas paradisíacas con vistas espectaculares al mar Egeo.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 10 días / 9 noches</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Hotel boutique</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Tours incluidos</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Desde $1,800</span>
+                                <a href="contacto.html" class="btn btn-outline-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 destino-item" data-categoria="europa">
+                    <div class="card destination-card shadow">
+                        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800"
+                            class="card-img-top" alt="Islandia">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Europa</span>
+                            <h5 class="card-title fw-bold">Reikiavik, Islandia</h5>
+                            <p class="card-text">Auroras boreales, glaciares y géiseres en la tierra de hielo y fuego.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 8 días / 7 noches</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Cabaña tradicional</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Tour de auroras</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Desde $2,200</span>
+                                <a href="contacto.html" class="btn btn-outline-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asia -->
+                <div class="col-md-6 col-lg-4 destino-item" data-categoria="asia">
+                    <div class="card destination-card shadow">
+                        <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?w=800"
+                            class="card-img-top" alt="Japón">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Asia</span>
+                            <h5 class="card-title fw-bold">Tokio, Japón</h5>
+                            <p class="card-text">Templos milenarios, tecnología futurista y cultura fascinante.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 12 días / 11 noches</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Hotel céntrico</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> JR Pass incluido</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Desde $2,500</span>
+                                <a href="contacto.html" class="btn btn-outline-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 destino-item" data-categoria="asia">
+                    <div class="card destination-card shadow">
+                        <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800"
+                            class="card-img-top" alt="Tailandia">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Asia</span>
+                            <h5 class="card-title fw-bold">Bangkok, Tailandia</h5>
+                            <p class="card-text">Templos dorados, mercados flotantes y playas paradisíacas.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 10 días / 9 noches</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Resort en la playa</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Excursiones incluidas</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Desde $1,300</span>
+                                <a href="contacto.html" class="btn btn-outline-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 destino-item" data-categoria="asia">
+                    <div class="card destination-card shadow">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=800" class="card-img-top"
+                            alt="Bali">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Asia</span>
+                            <h5 class="card-title fw-bold">Bali, Indonesia</h5>
+                            <p class="card-text">Arrozales en terrazas, templos sagrados y playas de ensueño.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 9 días / 8 noches</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Villa privada</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Spa incluido</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Desde $1,650</span>
+                                <a href="contacto.html" class="btn btn-outline-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- América -->
+                <div class="col-md-6 col-lg-4 destino-item" data-categoria="america">
+                    <div class="card destination-card shadow">
+                        <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800"
+                            class="card-img-top" alt="Perú">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">América</span>
+                            <h5 class="card-title fw-bold">Cusco, Perú</h5>
+                            <p class="card-text">Machu Picchu, Valle Sagrado y la magia de la cultura inca.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 8 días / 7 noches</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Hotel colonial</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Entrada a Machu Picchu</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Desde $1,400</span>
+                                <a href="contacto.html" class="btn btn-outline-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 destino-item" data-categoria="america">
+                    <div class="card destination-card shadow">
+                        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800"
+                            class="card-img-top" alt="Nueva York">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">América</span>
+                            <h5 class="card-title fw-bold">Nueva York, USA</h5>
+                            <p class="card-text">La gran manzana: Broadway, Central Park, Times Square.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 6 días / 5 noches</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Hotel en Manhattan</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> City Pass incluido</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Desde $1,950</span>
+                                <a href="contacto.html" class="btn btn-outline-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 destino-item" data-categoria="america">
+                    <div class="card destination-card shadow">
+                        <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=800"
+                            class="card-img-top" alt="Cancún">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">América</span>
+                            <h5 class="card-title fw-bold">Cancún, México</h5>
+                            <p class="card-text">Playas de arena blanca, ruinas mayas y cenotes cristalinos.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 7 días / 6 noches</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Resort todo incluido</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Tour a Chichén Itzá</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Desde $1,100</span>
+                                <a href="contacto.html" class="btn btn-outline-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- África -->
+                <div class="col-md-6 col-lg-4 destino-item" data-categoria="africa">
+                    <div class="card destination-card shadow">
+                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800"
+                            class="card-img-top" alt="Egipto">
+                        <div class="card-body">
+                            <span class="badge bg-warning mb-2">África</span>
+                            <h5 class="card-title fw-bold">El Cairo, Egipto</h5>
+                            <p class="card-text">Pirámides de Giza, Esfinge y crucero por el Nilo.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 10 días / 9 noches</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Crucero por el Nilo</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Guía egiptólogo</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Desde $1,600</span>
+                                <a href="contacto.html" class="btn btn-outline-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 destino-item" data-categoria="africa">
+                    <div class="card destination-card shadow">
+                        <img src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800"
+                            class="card-img-top" alt="Marruecos">
+                        <div class="card-body">
+                            <span class="badge bg-warning mb-2">África</span>
+                            <h5 class="card-title fw-bold">Marrakech, Marruecos</h5>
+                            <p class="card-text">Zocos coloridos, palacios y el desierto del Sáhara.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 7 días / 6 noches</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Riad tradicional</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Noche en el desierto</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Desde $1,250</span>
+                                <a href="contacto.html" class="btn btn-outline-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 destino-item" data-categoria="africa">
+                    <div class="card destination-card shadow">
+                        <img src="https://images.unsplash.com/photo-1484318571209-661cf29a69c3?w=800"
+                            class="card-img-top" alt="Kenia">
+                        <div class="card-body">
+                            <span class="badge bg-warning mb-2">África</span>
+                            <h5 class="card-title fw-bold">Nairobi, Kenia</h5>
+                            <p class="card-text">Safari en el Masai Mara, fauna salvaje y paisajes increíbles.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 9 días / 8 noches</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Lodge en safari</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Safaris diarios</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Desde $2,800</span>
+                                <a href="contacto.html" class="btn btn-outline-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-airplane-fill"></i> Viajes Mundo</h5>
+                    <p>Tu agencia de viajes de confianza. Hacemos realidad tus sueños de aventura alrededor del mundo.
+                    </p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3">Enlaces</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="../index.html">Inicio</a></li>
+                        <li class="mb-2"><a href="destinos.html">Destinos</a></li>
+                        <li class="mb-2"><a href="contacto.html">Contacto</a></li>
+                        <li class="mb-2"><a href="#">Sobre Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Destinos Populares</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#">Europa</a></li>
+                        <li class="mb-2"><a href="#">Asia</a></li>
+                        <li class="mb-2"><a href="#">América</a></li>
+                        <li class="mb-2"><a href="#">África</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3"></h5>
+                    <p>Suscríbete para recibir ofertas exclusivas</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Tu email">
+                        <button class="btn btn-warning" type="button">Suscribir</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Viajes Mundo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sistema de filtrado
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const destinoItems = document.querySelectorAll('.destino-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remover clase active de todos los botones
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Agregar clase active al botón clickeado
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                destinoItems.forEach(item => {
+                    if (filter === 'todos') {
+                        item.style.display = 'block';
+                    } else {
+                        if (item.getAttribute('data-categoria') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
