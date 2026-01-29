@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Viajes Mundo - Agencia de Viajes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #2c7da0;
+            --secondary-color: #f77f00;
+            --dark-color: #003049;
+        }
+       
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+       
+        .navbar {
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+       
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+       
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+       
+        .contact-form {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+       
+        .contact-info-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+       
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+        }
+       
+        .contact-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+       
+        .map-container {
+            height: 25rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+       
+        .btn-custom {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+       
+        .btn-custom:hover {
+            background-color: #dc2f02;
+            transform: scale(1.02);
+            color: white;
+        }
+       
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(44, 125, 160, 0.25);
+        }
+       
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+       
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+       
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+       
+        @media (max-width: 768px) {
+            .map-container {
+                height: 18rem;
+            }
+           
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-airplane-fill"></i> Viajes Mundo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinos.html">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Contáctanos</h1>
+            <p class="lead">Estamos aquí para ayudarte a planear tu próximo viaje</p>
+        </div>
+    </div>
+
+    <!-- Información de Contacto -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Ubicación</h5>
+                        <p class="text-muted">Calle Gran Vía 28<br>28013 Madrid, España</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Teléfono</h5>
+                        <p class="text-muted">+34 912 345 678<br>+34 915 678 901</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Email</h5>
+                        <p class="text-muted">info@viajesmundo.com<br>ventas@viajesmundo.com</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="bi bi-clock-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Horario</h5>
+                        <p class="text-muted">Lun - Vie: 9:00 - 20:00<br>Sábados: 10:00 - 14:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario y Mapa -->
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <h3 class="fw-bold mb-4">Envíanos un Mensaje</h3>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Nombre Completo *</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email *</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Teléfono *</label>
+                                    <input type="tel" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Destino de Interés</label>
+                                    <select class="form-select">
+                                        <option selected>Seleccionar...</option>
+                                        <option>Europa</option>
+                                        <option>Asia</option>
+                                        <option>América</option>
+                                        <option>África</option>
+                                        <option>Oceanía</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Fecha Aproximada de Viaje</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Número de Viajeros</label>
+                                    <input type="number" class="form-control" min="1" value="1">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Presupuesto Estimado</label>
+                                    <select class="form-select">
+                                        <option selected>Seleccionar...</option>
+                                        <option>Menos de $1,000</option>
+                                        <option>$1,000 - $2,000</option>
+                                        <option>$2,000 - $3,000</option>
+                                        <option>Más de $3,000</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Mensaje *</label>
+                                    <textarea class="form-control" rows="4" required placeholder="Cuéntanos sobre tu viaje ideal..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Deseo recibir ofertas y novedades por email
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-custom">
+                                        <i class="bi bi-send-fill me-2"></i>Enviar Mensaje
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="map-container mb-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.0883723850393!2d-3.7037901999999996!3d40.416775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Spain!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="contact-form">
+                        <h4 class="fw-bold mb-3">¿Por Qué Visitarnos?</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <strong>Asesoramiento Personalizado:</strong> Te ayudamos a diseñar tu viaje perfecto
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <strong>Catálogos Físicos:</strong> Explora nuestros destinos en persona
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <strong>Ofertas Exclusivas:</strong> Descuentos especiales para clientes en oficina
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <strong>Café Gratis:</strong> Disfruta de una bebida mientras planeas tu aventura
+                            </li>
+                        </ul>
+                        <div class="alert alert-info mt-4">
+                            <i class="bi bi-info-circle-fill me-2"></i>
+                            <strong>¡Visítanos sin cita previa!</strong> O llama para programar una consulta personalizada.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Preguntas Frecuentes</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    ¿Cuánto tiempo antes debo reservar mi viaje?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Recomendamos reservar con al menos 2-3 meses de anticipación para destinos internacionales. Para fechas especiales como Navidad o verano, lo ideal es reservar con 4-6 meses de antelación.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    ¿Qué incluyen los paquetes de viaje?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Nuestros paquetes típicamente incluyen vuelos, alojamiento, algunos traslados y tours seleccionados. Cada paquete es diferente y personalizable según tus necesidades.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    ¿Ofrecen seguro de viaje?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, ofrecemos diferentes opciones de seguros de viaje que cubren cancelaciones, emergencias médicas, pérdida de equipaje y más.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    ¿Puedo hacer cambios después de reservar?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Dependiendo del tipo de tarifa y las políticas de las aerolíneas/hoteles, es posible hacer cambios. Algunos pueden tener cargos adicionales. Te asesoramos en cada caso.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-airplane-fill"></i> Viajes Mundo</h5>
+                    <p>Tu agencia de viajes de confianza. Hacemos realidad tus sueños de aventura alrededor del mundo.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3">Enlaces</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="index.html">Inicio</a></li>
+                        <li class="mb-2"><a href="destinos.html">Destinos</a></li>
+                        <li class="mb-2"><a href="contacto.html">Contacto</a></li>
+                        <li class="mb-2"><a href="#">Sobre Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Destinos Populares</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#">Europa</a></li>
+                        <li class="mb-2"><a href="#">Asia</a></li>
+                        <li class="mb-2"><a href="#">América</a></li>
+                        <li class="mb-2"><a href="#">África</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3"></h5>
+                    <p>Suscríbete para recibir ofertas exclusivas</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Tu email">
+                        <button class="btn btn-warning" type="button">Suscribir</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Viajes Mundo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Validación del formulario
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
