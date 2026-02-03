@@ -123,10 +123,19 @@ footer {
 
 /* Page Headers (Destinos & Contacto) */
 .page-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
-    color: white;
+    background: transparent; /* Marco sin fondo */
     padding: 4rem 0 2rem;
     text-align: center;
+}
+
+/* Títulos con degradado azul (igual al navbar) */
+.page-header .display-3,
+.page-header .lead {
+    background: linear-gradient(90deg, var(--dark-color), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 /* Cards & Reviews */
