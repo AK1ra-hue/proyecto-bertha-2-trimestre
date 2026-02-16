@@ -1,34 +1,30 @@
-
+/* aunque la cantidad de lineas no esta en una estado critico
+hay propiedades que pueden remplazarse por clases de bootstrap */
 :root {
     --primary-color: #2c7da0;
     --secondary-color: #f77f00;
     --dark-color: #003049;
 }
 
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
 }
 
-
 .navbar {
     background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
 }
-
 .section-title {
     color: var(--dark-color);
     font-weight: bold;
     position: relative;
-    
-}
 
+}
 .section-title::after {
     content: '';
     position: absolute;
@@ -39,7 +35,6 @@ body {
     height: 3px;
     background-color: var(--secondary-color);
 }
-
 .destination-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
@@ -47,17 +42,14 @@ body {
     border-radius: 15px;
     overflow: hidden;
 }
-
 .destination-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
-
 .destination-card img {
     height: 15rem;
     object-fit: cover;
 }
-
 .price-tag {
     background-color: var(--secondary-color);
     color: white;
@@ -66,7 +58,6 @@ body {
     font-weight: bold;
     display: inline-block;
 }
-
 .btn-custom {
     background-color: var(--secondary-color);
     color: white;
@@ -76,30 +67,24 @@ body {
     font-weight: bold;
     transition: all 0.3s ease;
 }
-
 .btn-custom:hover {
     background-color: #dc2f02;
     transform: scale(1.05);
     color: white;
 }
-
 footer {
     background-color: var(--dark-color);
     color: white;
-    
-}
 
+}
 .footer-links a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
 .footer-links a:hover {
     color: var(--secondary-color);
 }
-
-
 .hero-section {
     background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
     color: white;
@@ -107,25 +92,19 @@ footer {
     display: flex;
     align-items: center;
 }
-
 .carousel-item img {
     height: 70vh;
     object-fit: cover;
 }
-
 .cta-section {
     background: linear-gradient(135deg, var(--secondary-color), #dc2f02);
     color: white;
-    
 }
-
-
 .page-header {
-    background: transparent; /* Marco sin fondo */
+    background: transparent;
+    /* Marco sin fondo */
     text-align: center;
 }
-
-
 .page-header .display-3,
 .page-header .lead {
     background: linear-gradient(90deg, var(--dark-color), var(--primary-color));
@@ -134,25 +113,19 @@ footer {
     background-clip: text;
     color: transparent;
 }
-
-
 .review-card {
     background-color: #f8f9fa;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-
 .stars {
     color: #ffd700;
 }
-
-
 .contact-form {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
-
 .contact-info-card {
     background-color: white;
     border-radius: 15px;
@@ -160,11 +133,9 @@ footer {
     height: 100%;
     transition: transform 0.3s ease;
 }
-
 .contact-info-card:hover {
     transform: translateY(-5px);
 }
-
 .contact-icon {
     width: 4rem;
     height: 4rem;
@@ -175,59 +146,41 @@ footer {
     justify-content: center;
     color: white;
     font-size: 1.5rem;
-    
 }
-
-
 .map-container {
     height: 25rem;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
-
-
 .filter-btn {
     border-radius: 25px;
-    
 }
-
 .filter-btn.active {
     background-color: var(--primary-color);
     color: white;
 }
-
 .form-control:focus,
 .form-select:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 0.2rem rgba(44, 125, 160, 0.25);
 }
-
-
 .pages-page .btn-custom {
     width: 100%;
 }
-
 .pages-page .btn-custom:hover {
     transform: scale(1.02);
 }
-
-
 @media (max-width: 768px) {
     .carousel-item img {
         height: 40vh;
     }
-
     .hero-section {
         min-height: 40vh;
-        
-    }
 
+    }
     .map-container {
         height: 18rem;
     }
-
-    .contact-form {
-        
-    }
+    .contact-form {}
 }
