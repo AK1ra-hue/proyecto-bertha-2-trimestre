@@ -15,8 +15,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="../images/logo-2eval-web.png" alt="Logo" style="height:70px;" class="me-2">
-                </i> Viajes Mundo
+                <img src="../images/logo-2eval-web.png" alt="Logo" height="70" class="me-2 align-text-top">
+                Viajes Mundo
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -37,20 +37,171 @@
         </div>
     </nav>
 
-    <!-- Sección Hero -->
-    <section class="hero-section py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="display-3 fw-bold mb-4">Tu Próxima Aventura Comienza Aquí</h1>
-                    <p class="lead mb-4">Descubre destinos increíbles alrededor del mundo con nuestros paquetes
-                        personalizados</p>
-                    <a href="pages/destinos.html" class="btn btn-custom btn-lg me-3">Ver Destinos</a>
-                    <a href="pages/contacto.html" class="btn btn-custom btn-lg">Contactar</a>
+    <!-- Sección Hero: carrusel con imágenes de Destinos -->
+    <section>
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item tokio active" data-title="Tokio, Japón" data-subtitle="Templos milenarios y tecnología futurista te esperan">
+                    <img src="https://travelbyprix.com/wp-content/uploads/2024/09/japon-templo.webp?w=2400" class="d-block w-100" alt="Tokio">
+                </div>
+                <div class="carousel-item" data-title="Explora destinos de ensueño" data-subtitle="Playas, cultura y experiencias inolvidables te esperan">
+                    <img src="https://blog.clickandboat.com/es/wp-content/uploads/2017/04/oia-santorini.jpg?w=2400" class="d-block w-100" alt="Santorini">
+                </div>
+                <div class="carousel-item bangkok" data-title="Bangkok, Tailandia" data-subtitle="Templos dorados, mercados y gastronomía vibrante">
+                    <img src="https://huakai.es/wp-content/uploads/2024/07/30-1024x683.png?w=2400" class="d-block w-100" alt="Bangkok">
+                </div>
+                <!-- Diapositiva de Perú eliminada por solicitud (reemplazada por otras imágenes) -->
+                <div class="carousel-item" data-title="Naturaleza y aventura" data-subtitle="Paisajes espectaculares para los amantes de la naturaleza">
+                    <img src="https://islasviajeras.com/wp-content/uploads/2023/12/Turismo-en-Islandia-la-tierra-de-hielo-y-fuego-e1703328804174.jpg?w=2400" class="d-block w-100" alt="Islandia">
+                </div>
+                <div class="carousel-item" data-title="Historia y misterio" data-subtitle="Sumérgete en civilizaciones antiguas y experiencias únicas">
+                    <img src="https://supercurioso.com/wp-content/uploads/2020/04/Pir%C3%A1mides-de-Egipto.-Curiosidades-Origen-Historia-Caracter%C3%ADsticas.jpg?w=2400" class="d-block w-100" alt="Egipto">
+                </div>
+                <div class="carousel-item" data-title="Playas y cultura" data-subtitle="Relájate en playas paradisíacas y descubre tradiciones locales">
+                    <img src="https://dynamic-media.tacdn.com/media/photo-o/30/4c/52/8e/caption.jpg?w=2400&h=-1&s=1" class="d-block w-100" alt="Tailandia">
                 </div>
             </div>
-        </div>
+            <!-- Overlay fijo con texto que cambia según la diapositiva activa -->
+            <div class="carousel-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                <div class="overlay-text text-center text-white py-5 bg-dark bg-opacity-50 p-4 rounded-3 animate-fade-in">
+                    <div class="container">
+                        <h1 id="overlayTitle" class="display-3 fw-bold mb-3"></h1>
+                        <p id="overlaySubtitle" class="lead mb-4"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="pages/destinos.html" class="btn btn-light btn-lg">Ver Destinos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+            </div>
     </section>
+
+            <script>
+                (function(){
+                    const carousel = document.getElementById('heroCarousel');
+                    const overlayTitle = document.getElementById('overlayTitle');
+                    const overlaySubtitle = document.getElementById('overlaySubtitle');
+                    const overlayEl = document.querySelector('.overlay-text');
+                    const overlayButtons = overlayEl.querySelectorAll('a.btn');
+                    function updateOverlayFromActive(){
+                        const active = carousel.querySelector('.carousel-item.active');
+                        if(!active) return;
+                        // ensure overlay is visible before updating
+                        overlayEl.classList.remove('overlay-hidden');
+                        // remove any fade classes before re-adding
+                        overlayEl.classList.remove('animate-fade-in','animate-fade-out');
+                        overlayTitle.textContent = active.dataset.title || '';
+                        overlaySubtitle.textContent = active.dataset.subtitle || '';
+                        // show buttons after content updated
+                        overlayButtons.forEach(b => b.classList.remove('visually-hidden'));
+                        // trigger reflow to restart animation
+                        void overlayEl.offsetWidth;
+                        overlayEl.classList.add('animate-fade-in');
+                    }
+                    // hide previous text, buttons and overlay immediately when sliding starts
+                    carousel.addEventListener('slide.bs.carousel', function(){
+                        overlayEl.classList.remove('animate-fade-in');
+                        overlayEl.classList.add('animate-fade-out');
+                        // immediately hide the entire overlay so semi-transparent background disappears
+                        overlayEl.classList.add('overlay-hidden');
+                        // clear content quickly so it disappears during transition
+                        overlayTitle.textContent = '';
+                        overlaySubtitle.textContent = '';
+                        // hide buttons so they also disappear
+                        overlayButtons.forEach(b => b.classList.add('visually-hidden'));
+                    });
+                    // update content after slide transition completes
+                    carousel.addEventListener('slid.bs.carousel', updateOverlayFromActive);
+                    document.addEventListener('DOMContentLoaded', updateOverlayFromActive);
+                })();
+            </script>
+
+            <!-- Búsqueda de destinos -->
+            <section class="py-4 bg-white">
+                <div class="container">
+                    <div class="row justify-content-center mb-3">
+                        <div class="col-md-8">
+                            <form id="searchForm" class="input-group">
+                                <input id="searchInput" class="form-control" placeholder="Buscar destino..." aria-label="Buscar destino">
+                                <button class="btn btn-primary" type="submit">Buscar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="searchResults" class="row g-4"></div>
+                </div>
+            </section>
+
+            <script>
+                (function(){
+                    const destinations = [
+                        {name: "Japón", image: "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=800", desc: "Tradición y modernidad se encuentran en este fascinante país asiático.", link: "pages/destinos.html"},
+                        {name: "Santorini", image: "https://blog.clickandboat.com/es/wp-content/uploads/2017/04/oia-santorini.jpg?w=800", desc: "Islas paradisíacas con vistas espectaculares al mar Egeo.", link: "pages/destinos.html"},
+                        {name: "Perú", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Machu_Picchu%2C_Peru_%282018%29.jpg/500px-Machu_Picchu%2C_Peru_%282018%29.jpg", desc: "Descubre Machu Picchu y la rica cultura inca.", link: "pages/destinos.html"},
+                        {name: "Islandia", image: "https://viajesislandia.com/images/Islandia-px/auroras-boreales-snaefellsnes-islandia.jpg", desc: "Auroras boreales, glaciares y paisajes de otro mundo.", link: "pages/destinos.html"},
+                        {name: "Egipto", image: "https://supercurioso.com/wp-content/uploads/2020/04/Pir%C3%A1mides-de-Egipto.-Curiosidades-Origen-Historia-Caracter%C3%ADsticas.jpg?w=800", desc: "Las pirámides y los misterios del antiguo Egipto te esperan.", link: "pages/destinos.html"},
+                        {name: "Tailandia", image: "https://dynamic-media.tacdn.com/media/photo-o/30/4c/52/8e/caption.jpg?w=800&h=-1&s=1", desc: "Templos dorados, playas exóticas y gastronomía única.", link: "pages/destinos.html"},
+                        {name: "Tokio", image: "https://travelbyprix.com/wp-content/uploads/2024/09/japon-templo.webp?w=800", desc: "Templos milenarios, tecnología futurista y cultura fascinante.", link: "pages/destinos.html"},
+                        {name: "Bangkok", image: "https://huakai.es/wp-content/uploads/2024/07/30-1024x683.png?w=800", desc: "Templos dorados, mercados flotantes y playas paradisíacas.", link: "pages/destinos.html"}
+                    ];
+                    const popularNames = ["Japón","Santorini","Tailandia","Perú"];
+                    const form = document.getElementById('searchForm');
+                    const input = document.getElementById('searchInput');
+                    const results = document.getElementById('searchResults');
+
+                    function renderCards(list){
+                        results.innerHTML = '';
+                        list.forEach(d => {
+                            const col = document.createElement('div'); col.className = 'col-md-4';
+                            col.innerHTML = `
+                                <div class="card h-100">
+                                    <img src="${d.image}" class="card-img-top" alt="${d.name}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${d.name}</h5>
+                                        <p class="card-text">${d.desc}</p>
+                                        <a href="${d.link}" class="btn btn-primary">Ver destino</a>
+                                    </div>
+                                </div>`;
+                            results.appendChild(col);
+                        });
+                    }
+
+                    form.addEventListener('submit', function(e){
+                        e.preventDefault();
+                        const q = input.value.trim().toLowerCase();
+                        if(!q) {
+                            results.innerHTML = '';
+                            return;
+                        }
+                        const found = destinations.filter(d => d.name.toLowerCase().includes(q));
+                        if(found.length){
+                            renderCards(found);
+                        } else {
+                            results.innerHTML = `<div class="col-12"><p class="text-center">No tenemos ese destino de momento. Aquí los más populares:</p></div>`;
+                            const popular = destinations.filter(d => popularNames.includes(d.name));
+                            renderCards(popular);
+                        }
+                    });
+
+                    // show popular by default
+                    renderCards(destinations.filter(d => popularNames.includes(d.name)));
+                })();
+            </script>
 
     <!-- Destinos Destacados -->
     <section class="py-5">
@@ -58,75 +209,75 @@
             <h2 class="text-center section-title mb-4 pb-3">Destinos Destacados</h2>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
-                    <div class="card destination-card shadow">
+                    <div class="card bg-white rounded-3 overflow-hidden h-100 shadow-sm">
                         <img src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=800"
                             class="card-img-top" alt="Japón">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Japón</h5>
                             <p class="card-text">Tradición y modernidad se encuentran en este fascinante país asiático.
                             </p>
-                            <span class="price-tag">Desde $2,500</span>
+                                <span class="fw-bold text-primary">Desde $2,500</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="card destination-card shadow">
+                    <div class="card bg-white rounded-3 overflow-hidden h-100 shadow-sm">
                         <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800"
                             class="card-img-top" alt="Santorini">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Santorini</h5>
                             <p class="card-text">Explora islas paradisíacas y la cuna de la civilización occidental.</p>
-                            <span class="price-tag">Desde $1,800</span>
+                                <span class="fw-bold text-primary">Desde $1,800</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="card destination-card shadow">
+                    <div class="card bg-white rounded-3 overflow-hidden h-100 shadow-sm">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Machu_Picchu%2C_Peru_%282018%29.jpg/500px-Machu_Picchu%2C_Peru_%282018%29.jpg"
                             class="card-img-top" alt="Machu Picchu">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Perú</h5>
                             <p class="card-text">Descubre Machu Picchu y la rica cultura inca.</p>
-                            <span class="price-tag">Desde $1,400</span>
+                                <span class="fw-bold text-primary">Desde $1,400</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="card destination-card shadow">
+                    <div class="card bg-white rounded-3 overflow-hidden h-100 shadow-sm">
                         <img src="https://viajesislandia.com/images/Islandia-px/auroras-boreales-snaefellsnes-islandia.jpg"
                             class="card-img-top" alt="Islandia">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Islandia</h5>
                             <p class="card-text">Auroras boreales, glaciares y paisajes de otro mundo.</p>
-                            <span class="price-tag">Desde $2,200</span>
+                                <span class="fw-bold text-primary">Desde $2,200</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="card destination-card shadow">
+                    <div class="card bg-white rounded-3 overflow-hidden h-100 shadow-sm">
                         <img src="https://supercurioso.com/wp-content/uploads/2020/04/Pir%C3%A1mides-de-Egipto.-Curiosidades-Origen-Historia-Caracter%C3%ADsticas.jpg"
                             class="card-img-top" alt="Egipto">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Egipto</h5>
                             <p class="card-text">Las pirámides y los misterios del antiguo Egipto te esperan.</p>
-                            <span class="price-tag">Desde $1,600</span>
+                                <span class="fw-bold text-primary">Desde $1,600</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="card destination-card shadow">
+                    <div class="card bg-white rounded-3 overflow-hidden h-100 shadow-sm">
                         <img src="https://dynamic-media.tacdn.com/media/photo-o/30/4c/52/8e/caption.jpg?w=2400&h=-1&s=1"
                             class="card-img-top" alt="Tailandia">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Tailandia</h5>
                             <p class="card-text">Templos dorados, playas exóticas y gastronomía única.</p>
-                            <span class="price-tag">Desde $1,300</span>
+                                <span class="fw-bold text-primary">Desde $1,300</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-5">
-                <a href="pages/destinos.html" class="btn btn-custom btn-lg">Ver Todos los Destinos</a>
+                <a href="pages/destinos.html" class="btn btn-primary btn-lg">Ver Todos los Destinos</a>
             </div>
         </div>
     </section>
@@ -138,28 +289,28 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <div class="text-center p-4">
-                        <i class="bi bi-shield-check text-primary" style="font-size: 3rem;"></i>
+                        <i class="bi bi-shield-check text-primary fs-1"></i>
                         <h5 class="mt-3 fw-bold">Viajes Seguros</h5>
                         <p>Garantizamos tu seguridad en cada destino</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="text-center p-4">
-                        <i class="bi bi-wallet2 text-primary" style="font-size: 3rem;"></i>
+                        <i class="bi bi-wallet2 text-primary fs-1"></i>
                         <h5 class="mt-3 fw-bold">Mejores Precios</h5>
                         <p>Ofertas competitivas sin sacrificar calidad</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="text-center p-4">
-                        <i class="bi bi-headset text-primary" style="font-size: 3rem;"></i>
+                        <i class="bi bi-headset text-primary fs-1"></i>
                         <h5 class="mt-3 fw-bold">Atención 24/7</h5>
                         <p>Soporte disponible en todo momento</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="text-center p-4">
-                        <i class="bi bi-star-fill text-primary" style="font-size: 3rem;"></i>
+                        <i class="bi bi-star-fill text-primary fs-1"></i>
                         <h5 class="mt-3 fw-bold">Experiencias Únicas</h5>
                         <p>Vivencias que recordarás toda la vida</p>
                     </div>
@@ -174,7 +325,7 @@
             <h2 class="text-center section-title mb-4 pb-3">Lo Que Dicen Nuestros Clientes</h2>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <div class="review-card p-4 mb-4">
+                    <div class="bg-light rounded-3 p-4 mb-4 shadow-sm">
                         <div class="stars mb-2">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -185,10 +336,9 @@
                         <p class="mb-3">"Increíble experiencia en Japón. Todo perfectamente organizado, desde el
                             transporte hasta los hoteles. ¡Volveré a viajar con ellos!"</p>
                         <div class="d-flex align-items-center">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                                style="width: 50px; height: 50px;">
-                                <strong>MC</strong>
-                            </div>
+                                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center p-3">
+                                        <strong>MC</strong>
+                                    </div>
                             <div class="ms-3">
                                 <strong>María Carla</strong>
                                 <div class="text-muted small">Madrid, España</div>
@@ -197,7 +347,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="review-card p-4 mb-4">
+                    <div class="bg-light rounded-3 p-4 mb-4 shadow-sm">
                         <div class="stars mb-2">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -208,8 +358,7 @@
                         <p class="mb-3">"Mi viaje a Grecia fue un sueño hecho realidad. Las islas, la comida, todo fue
                             espectacular. La atención al cliente fue excelente."</p>
                         <div class="d-flex align-items-center">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                                style="width: 50px; height: 50px;">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center p-3">
                                 <strong>JR</strong>
                             </div>
                             <div class="ms-3">
@@ -220,7 +369,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="review-card p-4 mb-4">
+                    <div class="bg-light rounded-3 p-4 mb-4 shadow-sm">
                         <div class="stars mb-2">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -231,8 +380,7 @@
                         <p class="mb-3">"Machu Picchu fue mágico. La agencia se encargó de todo y pude disfrutar sin
                             preocupaciones. Personal muy profesional y amable."</p>
                         <div class="d-flex align-items-center">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                                style="width: 50px; height: 50px;">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center p-3">
                                 <strong>LP</strong>
                             </div>
                             <div class="ms-3">
@@ -247,7 +395,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="cta-section py-5">
+    <section class="bg-primary text-white py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mx-auto text-center">
@@ -266,11 +414,8 @@
             <h2 class="text-center section-title mb-4 pb-3">Encuéntranos</h2>
             <div class="row g-4">
                 <div class="col-lg-6">
-                    <div class="map-container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.0883723850393!2d-3.7037901999999996!3d40.416775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Spain!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                        </iframe>
+                    <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-sm">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.0883723850393!2d-3.7037901999999996!3d40.416775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Spain!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" allowfullscreen loading="lazy" class="border-0"></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -304,7 +449,7 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <h5 class="fw-bold mb-3"><img src="../images/logo-2eval-web.png" alt="Logo" style="height:70px;" class="me-2"> Viajes Mundo</h5>
+                    <h5 class="fw-bold mb-3"><img src="../images/logo-2eval-web.png" alt="Logo" height="70" class="me-2"> Viajes Mundo</h5>
                     <p>Tu agencia de viajes de confianza. Hacemos realidad tus sueños de aventura alrededor del mundo.
                     </p>
                     <div class="d-flex gap-3 mt-3">

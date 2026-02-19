@@ -13,7 +13,7 @@ body {
 
 .navbar {
     background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow moved to Bootstrap utility classes (e.g. shadow, shadow-sm) */
 }
 .navbar-brand {
     font-weight: bold;
@@ -22,56 +22,17 @@ body {
 .section-title {
     color: var(--dark-color);
     font-weight: bold;
-    position: relative;
-
+    /* position handled via Bootstrap utility: add class `position-relative` to headings */
 }
 .section-title::after {
     content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 5rem;
-    height: 3px;
+    /* ::after placement kept here because it's a pseudo-element; prefer not to duplicate with utilities */
     background-color: var(--secondary-color);
 }
-.destination-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-}
-.destination-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-.destination-card img {
-    height: 15rem;
-    object-fit: cover;
-}
-.price-tag {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-weight: bold;
-    display: inline-block;
-}
-.btn-custom {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 0.75rem 2rem;
-    border-radius: 50px;
-    border: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-.btn-custom:hover {
-    background-color: #dc2f02;
-    transform: scale(1.05);
-    color: white;
-}
+/* destination-card and price-tag styles removed — use Bootstrap utilities instead
+   e.g. on the card element: `bg-white rounded-3 overflow-hidden h-100 shadow-sm`
+   and for prices: `fw-bold text-primary` */
+/* custom button styles removed — use Bootstrap button classes (btn-primary, btn-outline, rounded-pill) */
 footer {
     background-color: var(--dark-color);
     color: white;
@@ -93,9 +54,13 @@ footer {
     align-items: center;
 }
 .carousel-item img {
-    height: 70vh;
+    height: 75vh;
     object-fit: cover;
 }
+
+/* For slides that must show the full image (no cropping) */
+/* Paris-specific carousel rules removed — slides now use direct <img> elements or specific
+   utilities (`object-fit`, `object-position`) per slide (see HTML classes `.paris`, `.tokio`, etc.) */
 .cta-section {
     background: linear-gradient(135deg, var(--secondary-color), #dc2f02);
     color: white;
@@ -116,71 +81,89 @@ footer {
 .review-card {
     background-color: #f8f9fa;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* use Bootstrap shadow utilities (shadow, shadow-sm) */
 }
 .stars {
     color: #ffd700;
 }
-.contact-form {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
+.contact-form,
 .contact-info-card {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    transition: transform 0.3s ease;
-}
-.contact-info-card:hover {
-    transform: translateY(-5px);
+    /* card visual treatments (background, rounded, shadow) should use Bootstrap classes
+       e.g. bg-white, rounded-3, shadow-sm and utility sizing like h-100 */
 }
 .contact-icon {
-    width: 4rem;
-    height: 4rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
+    /* size and rounded shape handled via utilities: use rounded-circle and p-3 / fs-4 */
 }
 .map-container {
-    height: 25rem;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    /* use Bootstrap `ratio` and utility classes for size, rounding and shadow */
 }
-.filter-btn {
-    border-radius: 25px;
-}
-.filter-btn.active {
-    background-color: var(--primary-color);
-    color: white;
-}
+.filter-btn { }
+.filter-btn.active { }
 .form-control:focus,
-.form-select:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem rgba(44, 125, 160, 0.25);
-}
-.pages-page .btn-custom {
-    width: 100%;
-}
-.pages-page .btn-custom:hover {
-    transform: scale(1.02);
-}
+.form-select:focus { }
+/* Page specific custom button sizing removed — use Bootstrap `w-100` on buttons when needed */
 @media (max-width: 768px) {
     .carousel-item img {
         height: 40vh;
     }
-    .hero-section {
-        min-height: 40vh;
-
-    }
-    .map-container {
-        height: 18rem;
-    }
+    .hero-section { }
+    .map-container { }
     .contact-form {}
+}
+/* Overlay animation for carousel text */
+.overlay-text {
+    animation-duration: 0.6s;
+    animation-fill-mode: both;
+}
+.animate-fade-in {
+    animation-name: fadeInUp;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Fade-out animation for overlay when slide starts */
+.animate-fade-out {
+    animation-name: fadeOutDown;
+    animation-duration: 0.35s;
+    animation-fill-mode: both;
+}
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+}
+
+/* Utility to hide the whole overlay immediately during slide transitions */
+.overlay-hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Make Tokio and Bangkok slides show the full image (appear further back) */
+.carousel-item.tokio img,
+.carousel-item.bangkok img {
+    /* Fill the slide so no black bars remain; this will enlarge/crop slightly */
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 75vh;
+}
+
+/* Remove dark background so images fully cover the slide */
+.carousel-item.tokio,
+.carousel-item.bangkok {
+    background-color: transparent;
 }
